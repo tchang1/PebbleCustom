@@ -1,0 +1,65 @@
+{{!< default}}
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+                <nav>
+        <ul>
+        <li><a href="{{@blog.url}}/">Blog</a></li>
+        <li><a href="{{@blog.url}}/work">Work</a></li>
+        <li><a href="{{@blog.url}}/about">About Me </a></li>
+        </ul>
+        </nav>
+        <header class="post-header">
+            <a href="{{@blog.url}}">
+                <i class="fa fa-chevron-circle-left"></i>
+                {{@blog.title}}
+            </a>
+        </header>
+
+
+        {{#post}}
+
+        <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
+
+        <h1 class="post-title">{{{title}}}</h1>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+        <footer class="post-footer">
+
+            {{#if author}}
+                <section class="author">
+                    <h4>{{author.name}}</h4>
+                    <p>{{author.bio}}</p>
+                </section>
+            {{/if}}
+
+            <section class="share">
+                <h4>Share</h4>
+                <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook-square"></i>
+
+                </a>
+                <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                   <i class="fa fa-google-plus"></i>
+                </a>
+            </section>
+
+        </footer>
+
+        {{/post}}
+
+    </article>
+
+</main>

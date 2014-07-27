@@ -1,0 +1,49 @@
+{{!< default}}
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+                <nav>
+        <ul>
+        <li><a href="{{@blog.url}}/">Blog</a></li>
+        <li><a href="{{@blog.url}}/work">Work</a></li>
+        <li><a href="{{@blog.url}}/about">About Me </a></li>
+        <li><a href="{{@blog.url}}/contact">Contact</a></li>
+        </ul>
+        </nav>
+        <header class="post-header">
+            <a href="{{@blog.url}}">
+                <i class="fa fa-chevron-circle-left"></i>
+                {{@blog.title}}
+            </a>
+        </header>
+
+
+        {{#post}}
+
+        <span class="post-meta">{{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
+
+        <h1 class="post-title">{{{title}}}</h1>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+        <footer class="post-footer">
+
+            {{#if author}}
+                <section class="author">
+                    <h4>{{author.name}}</h4>
+                    <p>{{author.bio}}</p>
+                </section>
+            {{/if}}
+
+
+        </footer>
+
+        {{/post}}
+
+    </article>
+
+</main>
