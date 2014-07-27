@@ -76,11 +76,14 @@ h6 {
 
 a {
   color: #4a4a4a;
+  text-decoration: none;
   -webkit-transition: ease 0.3s;
   -moz-transition: ease 0.3s;
   -o-transition: ease 0.3s;
   transition: ease 0.3s;
 }
+
+
 
 a:hover, a:active, a:focus {
   color: #57a3e8 !important;
@@ -89,6 +92,24 @@ a:hover, a:active, a:focus {
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
   color: #404040;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
+  margin-right: 3em;
+
+}
+
+nav {
+  margin-bottom: 1rem;
+  border-bottom: #ccc 1px solid;
+}
+
+nav ul {
+  padding: 0em 0em;
+  margin: 0em 0em;
 }
 
 b, strong {
@@ -269,7 +290,7 @@ pre, blockquote {
 
 .blog-title, .blog-description {
   display: inline-block;
-  margin: 5.2rem 0;
+  margin: 2rem 0 5.2rem 0;
 }
 
 .blog-description {
@@ -288,7 +309,7 @@ pre, blockquote {
 .post-template .post-header a {
   display: block;
   width: auto;
-  padding: 5.2rem 0;
+  padding: 2rem 0 5.2rem 0;
   -webkit-transition: ease 0.3s;
   -moz-transition: ease 0.3s;
   -o-transition: ease 0.3s;
