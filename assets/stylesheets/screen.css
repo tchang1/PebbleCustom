@@ -308,6 +308,18 @@ pre, blockquote {
   width: 100%;
 }
 
+.work-link a h2 {
+  -webkit-transition: ease 0.3s;
+  -moz-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.work-link a:hover h2 {
+  color: #57a3e8 !important;
+  text-decoration: none;
+}​
+
 .blog-title, .blog-description {
   display: inline-block;
   margin: 0 0 5.2rem 0;
