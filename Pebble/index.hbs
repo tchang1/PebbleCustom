@@ -2,14 +2,7 @@
 
 <header id="site-head">
     <div id="site-head-content" class="container">
-            <nav>
-        <ul>
-        <li><a href="{{@blog.url}}/">Blog</a></li>
-        <li><a href="{{@blog.url}}/work">Work</a></li>
-        <li><a href="{{@blog.url}}/about">About Me </a></li>
-        <li><a href="{{@blog.url}}/contact">Contact</a></li>
-        </ul>
-        </nav>
+            {{> topnav}}
         <h1 class="blog-title">{{@blog.title}}</h1>
         <h2 class="blog-description">{{@blog.description}}</h2>
     </div>
@@ -17,7 +10,7 @@
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">
-
+    
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
@@ -35,7 +28,7 @@
             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
         </header>
         <section class="post-excerpt inner">
-            <p>{{excerpt characters="20"}}&hellip;</p>
+            <p>{{excerpt words="15"}}&hellip;</p>
         </section>
         
     </article>

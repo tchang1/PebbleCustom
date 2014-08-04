@@ -39,6 +39,15 @@ body {
   color: #6a6a6a;
 }
 
+.wrapper {
+  position: relative;
+  min-height:100%;
+}
+
+.content {
+  padding-bottom: 16rem;
+}
+
 h1, h2, h3,
 h4, h5, h6 {
   text-rendering: optimizeLegibility;
@@ -98,22 +107,33 @@ nav ul li{
   display: inline-block;
   list-style-type: none;
   text-decoration: none;
-  margin-right: 3em;
+  margin-right: 2.5em;
 
 }
 
 nav {
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   border-bottom: #ccc 1px solid;
 }
 
 nav ul {
   padding: 0em 0em;
   margin: 0em 0em;
+  text-align: center;
 }
 
 b, strong {
   font-family: "monb", sans-serif;
+}
+
+.cover-image {
+  width:86%;
+  max-width: 860px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
 }
 
 .post-header.index .post-title {
@@ -288,9 +308,21 @@ pre, blockquote {
   width: 100%;
 }
 
+.work-link a h2 {
+  -webkit-transition: ease 0.3s;
+  -moz-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.work-link a:hover h2 {
+  color: #57a3e8 !important;
+  text-decoration: none;
+}​
+
 .blog-title, .blog-description {
   display: inline-block;
-  margin: 2rem 0 5.2rem 0;
+  margin: 0 0 5.2rem 0;
 }
 
 .blog-description {
@@ -309,7 +341,7 @@ pre, blockquote {
 .post-template .post-header a {
   display: block;
   width: auto;
-  padding: 2rem 0 5.2rem 0;
+  padding: 0 0 5.2rem 0;
   -webkit-transition: ease 0.3s;
   -moz-transition: ease 0.3s;
   -o-transition: ease 0.3s;
@@ -423,7 +455,10 @@ hr {
 }
 
 .site-footer {
-  position: relative;
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:100%;
   margin: 4rem 0 0 0;
   padding: 4rem 0;
   background: #1E2027;

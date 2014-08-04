@@ -4,21 +4,7 @@
 
     <article class="{{post_class}}">
 
-                <nav>
-        <ul>
-        <li><a href="{{@blog.url}}/">Blog</a></li>
-        <li><a href="{{@blog.url}}/work">Work</a></li>
-        <li><a href="{{@blog.url}}/about">About Me </a></li>
-        <li><a href="{{@blog.url}}/contact">Contact</a></li>
-        </ul>
-        </nav>
-        <header class="post-header">
-            <a href="{{@blog.url}}">
-                <i class="fa fa-chevron-circle-left"></i>
-                {{@blog.title}}
-            </a>
-        </header>
-
+         {{> topnav}}
 
         {{#post}}
 
